@@ -536,39 +536,36 @@ invalid_scope           | The scopes list contains an invalid or unsupported val
 
 ~~~
 curl -X POST \
-  https://danger.oktapreview.com/oauth2/aus8tf1sb1BJ7vywW0h7/v1/token \
-  --header "accept: application/json" \
-  --header "cache-control: no-cache" \
-  --header "content-type: application/x-www-form-urlencoded" \
-  -d 'grant_type=password&username=<username>&password=<password>&scope=api%3Aread&client_id=<clientid>&client_secret=<secret>'
+  https://westworld.okta.com/oauth2/aus9s3ami4MRoqQR90h7/v1/token \
+  -H 'accept: application/json' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -d 'grant_type=password&username=dolores.abernathy%40westworld.com&
+      password=<password>&scope=openid&client_id=<client_id>
+      &client_secret=<client_secret>'
 ~~~
 
 #### Response Example for Resource Owner Password Flow
 
 ~~~
 {
-    "access_token" : "eyJhbGciOiJSUzI1NiIsImtpZCI6IkNGT25UQWxQazNqQU8yV2dRVHFlNXVJMnl2MGswVkJWYUo4NGFjamtya0EifQ.ey
-                      J2ZXIiOjEsImp0aSI6IkFULjg4MEpRSHo5ZG92bDRDbDZPS2k4cE85a0ZBNHk1bGJzUjVMdzZyaDBmYzgiLCJpc3MiOiJ
-                      odHRwczovL2dyb25iZXJnLm9rdGFwcmV2aWV3LmNvbS9vYXV0aDIvYXVzOXMzYW1pNE1Sb3FRUjkwaDciLCJhdWQiOiJo
-                      dHRwOi8vYXBpLm5pa2UuY29tLyIsImlhdCI6MTQ5NDAyMTY3NywiZXhwIjoxNDk0MDIzNDc3LCJjaWQiOiJSMWtyV1Nob
-                      GZmdUhCbURPZHdZWiIsInVpZCI6IjAwdTg3NDBidGNjR3l6RFd4MGg3Iiwic2NwIjpbIm9wZW5pZCJdLCJzdWIiOiJqb2
-                      huLmdyb25iZXJnIn0.AP8bSsLv7Pjvpv5Zkhxy9ddY1pMuT8ziz2Wh-yByYIrGlnX_fK2e0cJtg8pqJueuMIPDjoHNES6
-                      KGxjeK2Q94A4KTTueJF4VEigAWzJ86ZSTfW1pCF4NHXIiBbkQgCnBkA5kG_KICu9H5OKVFHEetWDSdWljodxp-YgA-S4e
-                      x_r0fVxf6ap2FlwaRvSwhGwkbMWg6mvutd79Hva2Lc_m1XavIjECYQUQbfGyQPhbF7Mo579MFdOprPXkQ_Pbb4PooluFV
-                      y53HYCT4roqiYFjdJwUewrNvTBCE_Fzc2VBF260b6sLxPW9yWxDi0v6pCldl9iFsdiYnXNR1yLt0M4jxA",
+    "access_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXIiOjEsImp0aSI6IkFULkpfUVlIMlJEckI5R
+                      mxDd0hYVVI1WTIzcDg4U1JPS29jajJkd2kwZkhvTVEiLCJpc3MiOiJodHRwczovL3dlc3R3b3JsZC5
+                      va3RhLmNvbS9vYXV0aDIvYXVzOXMzYW1pNE1Sb3FRUjkwaDciLCJhdWQiOiJodHRwczovL2hvc3Qud
+                      2VzdHdvcmxkLmNvbSIsImlhdCI6MTQ5NDAyNjM1MywiZXhwIjoxNDk0MDMwMzM5LCJjaWQiOiJSMWt
+                      yV1NobGZmdUhCbURPZHdZWiIsInVpZCI6IjAwdWFlM3VicDlBSVBTd0JSMGg3Iiwic2NwIjpbIm9wZ
+                      W5pZCJdLCJzdWIiOiJkb2xvcmVzLmFiZXJuYXRoeUB3ZXN0d29ybGQuY29tIn0._tLmV0I4MIXCRaL
+                      2D_M-TQuNM34GoIz1MeKJL_YPqXk",
     "token_type" : "Bearer",
     "expires_in" : 1800,
     "scope" : "openid",
-    "id_token" :    "eyJhbGciOiJSUzI1NiIsImtpZCI6IkNGT25UQWxQazNqQU8yV2dRVHFlNXVJMnl2MGswVkJWYUo4NGFjamtya0EifQ.eyJ
-                     zdWIiOiIwMHU4NzQwYnRjY0d5ekRXeDBoNyIsInZlciI6MSwiaXNzIjoiaHR0cHM6Ly9ncm9uYmVyZy5va3RhcHJldmlld
-                     y5jb20vb2F1dGgyL2F1czlzM2FtaTRNUm9xUVI5MGg3IiwiYXVkIjoiUjFrcldTaGxmZnVIQm1ET2R3WVoiLCJpYXQiOjE
-                     0OTQwMjE2NzcsImV4cCI6MTQ5NDAyNTI3NywianRpIjoiSUQuV2RQaWJqZVRXMUI3bkREMlRtNTVIbDBBaTdiMHhTQjJOZ
-                     HZndWlWc2xtYyIsImFtciI6WyJwd2QiXSwiaWRwIjoiMDBvODc0MGJzcGhNcEtEWGIwaDciLCJhdXRoX3RpbWUiOjE0OTQ
-                     wMjE2NzcsImF0X2hhc2giOiJnQUdNaFlUNmtWUjNUVDFUa1NWZjhRIn0.AVCBSDUeTgQigNZ6hKcuqX_bBxDxUz65nIH87
-                     47yDVWjJRLPi0L_QSy-K8c3wK0aiP9nAtM91seGEbdT0Mv7w0AIO96FXYVPx-iQdqs_lIEL8uqt7SAUn9Hopqtzhz9Dga5
-                     TG-47K4uDB3q2CdiVvlsyPEU2xfCpJL6e5TzVTy687jZ4qAT6PYCv8ujWJY-vg6pxE3yn-tjSGgwrxQAB6APL-y8E1-QH2
-                     nyfM-Jk8-ACCCbYKu3EDTJkLXm_wncOhX524r5W0wL4JfD3-YQ2jMC_oeXROy8ZBkgQTiM0ESPRC9hV8w2jXbisMoF5HTE
-                     M9n2sRUCF_zn0xQi09Mb_fQ"
+    "id_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMHVhZTN1YnA5QUlQU3dCUjBoNyIsInZlc
+                  iI6MSwiaXNzIjoiaHR0cHM6Ly93ZXN0d29ybGQub2t0YS5jb20vb2F1dGgyL2F1czlzM2FtaTRNUm9xUVI
+                  5MGg3IiwiYXVkIjoiUjFrcldTaGxmZnVIQm1ET2R3WVoiLCJpYXQiOjE0OTQwMjYzNTMsImV4cCI6MTQ5N
+                  DAzMDI0OSwianRpIjoiSUQuZXVsblJSXzFCWWJQRlZpaWEtYVQtUG4yMVM4R3VqeDJqc21xbGZwTVdvbyI
+                  sImFtciI6WyJwd2QiXSwiaWRwIjoiMDBvODc0MGJzcGhNcEtEWGIwaDciLCJhdXRoX3RpbWUiOjE0OTQwM
+                  jYzNTMsImF0X2hhc2giOiJmZnJRX25OeEpzME9oRDk3aF9XM0F3In0.dg9qhUlGO-1Gg5nnSAaZlBzYSgu
+                  xuEHquhMP9oz8dHQ"
 }
 ~~~
 
