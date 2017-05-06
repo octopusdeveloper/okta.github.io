@@ -545,7 +545,7 @@ curl -X POST \
       & client_secret=<client_secret>'
 ~~~
 
-#### Response Example for Resource Owner Password Flow
+#### Response Example: Resource Owner Password Flow
 
 ~~~
 {
