@@ -542,7 +542,7 @@ curl -X POST \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d 'grant_type=password&username=dolores.abernathy%40westworld.com&
       password=<password>&scope=openid&client_id=<client_id>
-      &client_secret=<client_secret>'
+      & client_secret=<client_secret>'
 ~~~
 
 #### Response Example for Resource Owner Password Flow
@@ -596,7 +596,6 @@ curl -X POST \
                   8BM75celdy3jkpOurg"
 }
 ~~~ -->
-
 
 #### Response Example (Error)
 
